@@ -1,0 +1,12 @@
+site_name: Calm.io Docs
+site_description: Public API Documentation for the Calm DevOps Platform
+theme_dir: test_theme
+markdown_extensions:
+ - admonition
+
+pages:
+- ['index.md', 'Introduction']
+- ['Blueprints.md', 'Blueprints']
+- ['Applications.md', 'Applications']
+- ['Administration.md', 'Administration']
+

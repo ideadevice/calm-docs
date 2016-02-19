@@ -1,0 +1,5 @@
+# Introduction
+
+The Calm.io Command Line Interface is an alternative way of using the Calm DevOps Platform. Although the CLI does not provide you all the features and functionality that its GUI does, you can use it to perform a certain set of basic tasks with your blueprints and applications. 
+
+The CLI comes packaged with your Calm installer. Once Calm is installed on your machine, the CLI is available using the `calm` command. Running the `calm` command alone will give you a single-sentence synopsis of the usage of the command along with all the available subcommands. Running `calm -h` or `calm --help` outputs detailed help for the `calm` command including a list of subcommands and their usage. Appending `-h` or `--help` at the end of any Calm command will output help for that particular command. 
