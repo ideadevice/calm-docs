@@ -6,10 +6,15 @@ markdown_extensions:
 pages:
 - Home: 'index.md'
 - Installing Calm: 'installing_calm.md'
+- Upgrading Calm: 'upgrading_calm.md'
 - Launching the Calm AMI: 'calm_ami.md'
 - Setting Up Calm: 'setting_up_calm.md'
 - Using Calm: 'using_calm.md'
 - CLI Reference: 'calm_cli.md'
 - API Reference: 'calm_api.md'
+- Macro Reference: 'macro_reference.md'
+
+
+
 
 

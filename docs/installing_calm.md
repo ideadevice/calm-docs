@@ -321,5 +321,29 @@ cp /opt/calmio//opt/python-calm/fullscale/bin/* /opt/calmio/usr/bin/python-calm
 
 * Start Calm services by running: `sudo service python-calm start`
 
+###Troubleshooting Installation Errors on Ubuntu 14.05
+You might encounter a few errors while installing Calm on instances running Ubuntu 14.05. These errors can be resolved by doing the following:
+
+* Once your Calm installation is complete, login to the `chroot` of your Calm instance using the command: `epr` or `/usr/sbin/chroot /opt/calmio bash -l`.
+* Run the following commands in succession:
+````
+rm /dev/shm
+mkdir /dev/shm
+chmod 777 /dev/shm
+vi /etc/fstab
+````
+* Add or modify the `shm` line as shown below: 
+````
+From:
+none /dev/shm tmpfs rw 0 0
+To:
+none /dev/shm tmpfs rw,nosuid,nodev,noexec 0 0
+````
+* Exit `chroot` using the command `exit`
+* Run the command `service python-calm stop && service python-calm start` to restart the Calm service. 
+
+
+
+
 
 

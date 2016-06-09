@@ -271,7 +271,9 @@ You will have to configure Calm with your virtualization provider credentials in
 
 Pick your virtualization provider from the following options to view explicit instructions for configuring them with Calm. 
 
-[Amazon Web Services](#configuring-aws-credentials-on-calm)
+[Amazon Web Services](#configuring-calm-with-amazon-web-services)
+
+[Azure](#configuring-calm-wtih-azure)
 
 [Openstack](#configuring-calm-with-openstack)
 
@@ -285,7 +287,7 @@ Pick your virtualization provider from the following options to view explicit in
 
 [Custom Provider](#configuring-calm-with-your-custom-provider)
 
-## Configuring AWS Credentials on Calm
+## Configuring Calm with Amazon Web Services
 
 ### Before You Begin
 
@@ -334,6 +336,66 @@ You can repeat the instructions above to configure another set of AWS credential
 
 To configure Calm with another provider, pick the provider from the options below for provider specific instructions.
 
+[Azure](#configuring-calm-with-azure)
+
+[Openstack](#configuring-calm-with-openstack)
+
+[Docker](#configuring-calm-with-docker)
+
+[vCenter](#configuring-calm-with-vcenter)
+
+[XenServer](#configuring-calm-with-xenserver)
+
+[Nutanix](#configuring-calm-with-nutanix)
+
+[Custom Provider](#configuring-calm-with-your-custom-provider)
+
+
+To continue and configure Calm with your Deployment tools, click [here](#configuring-your-deployment-tools).
+
+To configure Calm with Jenkins, click [here](#configuring-calm-with-jenkins).
+
+To configure Calm with your private Docker Registry, click [here](#configuring-calm-with-your-docker-registry)
+
+## Configuring Calm with Azure
+
+### Before Your Begin
+
+Before you begin configuring Calm with Azure, you’ll need the following:
+
+* An Azure subscription. 
+
+* The Key and Certificate that is associated with it. 
+
+### Instructions
+
+To configure Calm with Azure, do the following:
+
+* Select **Settings** from the Calm menu. 
+
+2. Select the **Virtualization** tab and then **Add** **Provider**. 
+
+3. Select **Azure** from the **Type** drop-down menu. 
+
+4. Give your configuration a **Name**. 
+
+5. Enter a **Resource Sync Interval**. 
+
+6. Select the **Subscription ID** for your Azure subscription. 
+7. Concatenate, copy and paste your Azure **Key** and **Certificate** into the **Certificate** field. You can also upload a file that contains your Azure Key and Certificate. 
+
+ ![Azure](img/azure.png)
+
+* Select **Save** and then **Verify**.
+
+Once the configuration has been saved and verified, you will be able to use Calm to spin up instances and deploy deployments using your Azure services. 
+
+You can repeat the instructions above to configure another Azure subscription. 
+
+To configure Calm with another provider, pick the provider from the options below for provider specific instructions.
+
+[Amazon Web Services](#configuring-calm-with-amazon-web-services)
+
 [Openstack](#configuring-calm-with-openstack)
 
 [Docker](#configuring-calm-with-docker)
@@ -354,6 +416,7 @@ To configure Calm with Jenkins, click [here](#configuring-calm-with-jenkins).
 To configure Calm with your private Docker Registry, click [here](#configuring-calm-with-your-docker-registry)
 
 ## Configuring Calm with Openstack
+Calm currently supports integrations with Openstack versions Kilo and Juno and Keystone API v2 and v3. 
 
 ### Before Your Begin
 
@@ -362,6 +425,8 @@ Before you begin configuring Calm with Openstack, you’ll need the following:
 * An Openstack account with valid credentials.
 
 * The OpenStack auth URL
+`
+* The Openstack user account need not have root admin access over the account but needs administrative access for the projects beings specified while configuring Calm with Openstack. 
 
 ### Instructions
 
@@ -393,7 +458,9 @@ You can repeat the instructions above to configure another set of Openstack cred
 
 To configure Calm with another provider, pick the provider from the options below for provider specific instructions.
 
-[Amazon Web Services](#configuring-aws-credentials-on-calm)
+[Amazon Web Services](#configuring-calm-with-amazon-web-services)
+
+[Azure](#configuring-calm-with-azure)
 
 [Docker](#configuring-calm-with-docker)
 
@@ -447,7 +514,9 @@ You can repeat the instructions above to configure another set of Docker credent
 
 To configure Calm with another provider, pick the provider from the options below for provider specific instructions.
 
-[Amazon Web Services](#configuring-aws-credentials-on-calm)
+[Amazon Web Services](#configuring-calm-with-amazon-web-services)
+
+[Azure](#configuring-calm-with-azure)
 
 [Openstack](#configuring-calm-with-openstack)
 
@@ -506,7 +575,9 @@ You can repeat the instructions above to configure another set of vCenter creden
 
 To configure Calm with another provider, pick the provider from the options below for provider specific instructions.
 
-[Amazon Web Services](#configuring-aws-credentials-on-calm)
+[Amazon Web Services](#configuring-calm-with-amazon-web-services)
+
+[Azure](#configuring-calm-with-azure)
 
 [Openstack](#configuring-calm-with-openstack)
 
@@ -559,7 +630,9 @@ You can repeat the instructions above to configure another set of XenServer cred
 
 To configure Calm with another provider, pick the provider from the options below for provider specific instructions.
 
-[Amazon Web Services](#configuring-aws-credentials-on-calm)
+[Amazon Web Services](#configuring-calm-with-amazon-web-services)
+
+[Azure](#configuring-calm-with-azure)
 
 [Openstack](#configuring-calm-with-openstack)
 
@@ -614,7 +687,9 @@ You can repeat the instructions above to configure another set of Nutanix creden
 
 To configure Calm with another provider, pick the provider from the options below for provider specific instructions.
 
-[Amazon Web Services](#configuring-aws-credentials-on-calm)
+[Amazon Web Services](#configuring-calm-with-amazon-web-services)
+
+[Azure](#configuring-calm-with-azure)
 
 [Openstack](#configuring-calm-with-openstack)
 
@@ -676,14 +751,15 @@ To configure Calm with a custom provider, do the following:
 ![Custom Provider Settings](img/cp.png)
 
 
-
 Once the configuration has been saved and verified, you will be able to use Calm to spin up instances and deploy deployments using the resources provided by your custom provider. 
 
 You can repeat the instructions above to configure another custom provider’s credentials. 
 
 To configure Calm with another provider, pick the provider from the options below for provider specific instructions.
 
-[Amazon Web Services](#configuring-aws-credentials-on-calm)
+[Amazon Web Services](#configuring-calm-with-amazon-web-services)
+
+[Azure](#configuring-calm-with-azure)
 
 [Openstack](#configuring-calm-with-openstack)
 
@@ -919,6 +995,8 @@ To configure Calm with your Docker Registry, do the following:
 
 Once the configuration has been saved and verified, you will be able to use Calm to spin up instances and deploy deployments using the images in your Docker Registry. 
 
+!!! tip "Note"
+	You might encounter an SSL error while verifiying your Docker Registry settings with Calm. This error arises when you're using a self-signed certificate to secure your private registry. In order to avoid this error, you'll have to copy your SSL certificate to the instance that is running Calm. The certificate has to be copied to: `/opt/calmio/usr/local/share/ca-certificates/`. Once copied, get into the `chroot` of your Calm installation using the command `epr` or `/usr/sbin/chroot /opt/calmio bash -l` and run the command: `sudo update-ca-certificates`. Click **Verify** on the Docker Registry configuration page and **Save** your settings. 	
 You can repeat the instructions above to configure another Docker Registry with Calm. 
 
 
@@ -1044,9 +1122,9 @@ Let us add the NGINX array to the canvas.
 
 * Select the **Variables** tab to set two **Properties**, the public IP and the public DNS. 
 
-10. Name the first property as **Public IP** and set the **Value** to **Provision AWS EC2 | private_ip_address**.
+10. Name the first property as **Public IP** and set the **Value** to **Provision AWS EC2 | public_ip_address**.
 
-11. Name the second property as **Public DNS** and set the **Value** to **Provision AWS EC2 | private_dns_name**. This step would ensure that these properties will be available for the haproxy instance to use when required.
+11. Name the second property as **Public DNS** and set the **Value** to **Provision AWS EC2 | public_dns_name**. This step would ensure that these properties will be available for the haproxy instance to use when required.
 
 ![Service properties](img/blueprint_5.png)
 
@@ -1054,7 +1132,7 @@ Let us add the NGINX array to the canvas.
 
 13. Select **Save**. 
 
-Now that your NGINX array has been added, we can now add the HAProxy server to the canvas in similar fashion. The steps to be followed are similar to those that we followed while adding the NGINX array except that we do not add an **Array** **Configuration**. We also do not need to add a new set of credentials to be used with this service since we are provisioning another Ubuntu EC2 image to act as the HAProxy server and they can be SSH’ed into using the same credentials that we added in the previous step. We will also expose a single variable which is the **Public DNS** of the server and set the value to **Provision AWS EC2 | private_dns_name**. **Save** your blueprint so that the changes that we’ve made take effect. 
+Now that your NGINX array has been added, we can now add the HAProxy server to the canvas in similar fashion. The steps to be followed are similar to those that we followed while adding the NGINX array except that we do not add an **Array** **Configuration**. We also do not need to add a new set of credentials to be used with this service since we are provisioning another Ubuntu EC2 image to act as the HAProxy server and they can be SSH’ed into using the same credentials that we added in the previous step. We will also expose a single variable which is the **Public DNS** of the server and set the value to **Provision AWS EC2 | public_dns_name**. **Save** your blueprint so that the changes that we’ve made take effect. 
 
 ![Adding the HAProxy Load Balancer](img/blueprint_6.png)
 
@@ -1959,6 +2037,42 @@ To manage your teams, do the following:
 ![Managing Teams](img/teams_3.png)
 
 The changes that you’ve made to your team will now take effect. 
+
+# Administration
+The **Administration** page of your Calm installation lets you view and upgrade your Calm license and configure Calm with your LDAP service. You can access **Administration** by clicking the **Administration** icon on the Calm menu. 
+
+## Accessing License Information
+You can access your Calm License information directly from the **Administration** page of your Calm installation. Clicking on the **Administration** icon on the menu will bring you to the **License** tab as shown in the figure below:
+
+![Viewing License Information](img/license.png)
+
+The **License** tab on this page gives you information such as your **Current Plan**, **Plan Expiry Date**, **Nodes** and **Containers** **Used**, **Time Until Expiry in Days** and **Server MAC Address**. **Gold** license users can also choose whether to send anonymized usage statistics to Calm.io or not. 
+
+You can also upgrade your plan from this tab or upload a new license key, once your plan has been upgraded. 
+
+## Configuring Calm with LDAP
+
+Calm now comes with a Lightweight Directory Access Protocol (LDAP) integration to help streamline the login process. The integration uses the LDAP service account credentials to retrieve the user distinguished name (DN) from the LDAP server. Given the DN value for the user, the integration then rebinds with LDAP with the user's DN and password. The integration never stores LDAP passwords and uses a read-only connection that never writes to the LDAP directory. The integration only queries for information, and then updates its internal database accordingly.
+
+!!! tip "Note" 
+    If your instance is using an LDAP integration and the Active Directory settings require users to reset their password upon login, your users will **not** be able to log into the instance. The instance cannot change any user's active directory password.
+    
+You can access LDAP Settings by clicking on the **LDAP Settings** tab on the **Administration** page. 
+
+To configure LDAP Settings, do the following:
+* Enable LDAP by selecting the **Enable** checkbox. 
+* Enter the LDAP **Server** address. 
+* Enter the LDAP **Version** that you're using. 
+* Set a **Timeout** for your LDAP server. 
+* Enter the **Logging** **Mapping** using the format {username}@<company_url>. 
+
+!!! tip "Note" 
+    **{username}** is replaced with the actual username during the LDAP authentication.
+
+![Configuring Calm with LDAP](img/ldap.png)
+    
+This completes the configuration of Calm with your LDAP service. 
+
 
 # Account Settings
 

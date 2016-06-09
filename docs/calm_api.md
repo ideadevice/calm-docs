@@ -1,5 +1,5 @@
 #Introduction
-The Calm REST API v1 lets you interact with your Calm installation and work with your blueprints and applications on Calm. Using the Calm API, you can search for your blueprints, run them and delete blueprints that you no longer require. You can also search for applications, run flows on them and delete applications whenever you’d like to retire them. 
+The Calm REST API v1 lets you interact with your Calm installation and work with your blueprints and deployments on Calm. Using the Calm API, you can search for your blueprints, run them and delete blueprints that you no longer require. You can also search for deployments, run flows on them and delete deployments whenever you’d like to retire them. 
 
 ##Interaction
 You can interact with the Calm API using one of the following modes:
