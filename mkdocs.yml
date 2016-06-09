@@ -1,0 +1,15 @@
+site_name: Calm.io Documentation
+site_description: This site contains documentation for the Calm DevOps Platform
+theme_dir: test_theme
+markdown_extensions:
+ - admonition
+pages:
+- Home: 'index.md'
+- Installing Calm: 'installing_calm.md'
+- Launching the Calm AMI: 'calm_ami.md'
+- Setting Up Calm: 'setting_up_calm.md'
+- Using Calm: 'using_calm.md'
+- CLI Reference: 'calm_cli.md'
+- API Reference: 'calm_api.md'
+
+

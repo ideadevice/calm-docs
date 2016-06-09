@@ -1,0 +1,25 @@
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      {% if repo_name == 'GitHub' %}
+          <a href="{{ repo_url }}" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      {% elif repo_name == 'Bitbucket' %}
+          <a href="{{ repo_url }}" class="icon icon-bitbucket" style="float: left; color: #fcfcfc"> BitBucket</a>
+      {% endif %}
+      {% if previous_page %}
+        <span class="prev"><a href="{{ previous_page.url }}"><i class="fa fa-angle-left"></i> Previous</a></span>
+      {% endif %}
+      {% if next_page %}
+        <span class="next"><a href="{{ next_page.url }}">Next <i class="fa fa-angle-right"></i></a></span>
+      {% endif %}
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/calm_io"><i class="fa fa-twitter"></i>@calm_io</a></li>
+			<li class="list-inline"><a href="mailto:team@calm.io"><i class="fa fa-envelope-o"></i>team@calm.io</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://calm.io/privacy-policy">PRIVACY POLICY</li>
+			<li class="list-inline"><a href="http://calm.io/terms-of-use">TERMS OF USE</li>
+		</ul>
+	</div>
+</div>
